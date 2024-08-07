@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(145deg, #040053, #a70000);
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(145deg, #b3000086, #00075991);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transition: 0.5s;
+    animation: cardanim 2s infinite;
+}
+
+.card img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.card img:hover {
+    box-shadow: 0px 0px 10px white;
+    transition: 0.5s;
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    transform: rotate(360deg);
+    border-radius: 5px;
+    border: 1px solid white;
+    z-index: 1;
+    animation: cardanim 2s infinite;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.card p {
+    flex-grow: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card .price {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.card .buybtn {
+    background: linear-gradient(145deg, #7700ffd4, #ff0000ba);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(26, 0, 73);
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.card .buybtn:hover {
+    background: linear-gradient(145deg, #43008fd4, #7f0000ba);
+    padding: 10px;
+    width: 101%;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.2);
+    animation: cardanim 2s infinite;
+}
+
+.card .rating, .card .sizes, .card .colors {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.card .colors span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.stars{
+    font-size: 40px;
+    color: yellow;
+}
+@keyframes cardanim {
+    0%{
+        box-shadow: 0px 0px 0px rgb(255, 0, 0);
+    }
+    50%{
+        box-shadow: 0px 0px 20px rgb(242, 0, 255);
+        transform: translateY(-2px);
+    }
+    100%{
+        box-shadow: 0px 0px 0px rgb(0, 30, 255);
+    }
+}
